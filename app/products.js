@@ -48,9 +48,9 @@ router.delete('/:id', auth, async (req, res) => {
         const newResult = await Product.findByIdAndDelete({_id: req.params.id});
         if (newResult) {
             res.send("Task removed");
-        } else {
-            res.sendStatus(403);
         }
+    } else {
+        res.sendStatus(403);
     }
 });
 
