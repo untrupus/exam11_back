@@ -19,20 +19,20 @@ db.once("open", async () => {
 
     const [user, user1] = await User.create({
         username: "user",
-        password: "123",
+        password: "1234",
         displayName: "User",
         phone: 7722343454,
         token: nanoid()
     }, {
         username: "user1",
-        password: "123",
+        password: "1234",
         displayName: "User1",
         phone: 7722343454,
         token: nanoid()
     });
 
     await Product.create({
-            title: "Mercedes w220",
+            title: "Mercedes",
             category: "cars",
             user: user._id,
             price: 225,
