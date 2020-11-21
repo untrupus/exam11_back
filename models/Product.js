@@ -9,7 +9,8 @@ const ProductSchema = new Schema({
     },
     price: {
         type: Number,
-        required: true
+        required: true,
+        min: [0, 'Minimum quantity is zero']
     },
     description: {
         type: String,

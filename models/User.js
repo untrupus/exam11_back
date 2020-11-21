@@ -13,7 +13,8 @@ const UserSchema = new Schema({
     },
     password: {
         type: String,
-        required: true
+        required: true,
+        minlength: 4
     },
     displayName: {
         type: String,
@@ -21,7 +22,8 @@ const UserSchema = new Schema({
     },
     phone: {
         type: String,
-        required: true
+        required: true,
+        validate: [/^\d{10}$/, 'Enter correct number']
     },
     token: {
         type: String,

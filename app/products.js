@@ -50,7 +50,7 @@ router.delete('/:id', auth, async (req, res) => {
             res.send("Task removed");
         }
     } else {
-        res.sendStatus(403);
+        res.status(403).send({error: "Unauthorized"});
     }
 });
 

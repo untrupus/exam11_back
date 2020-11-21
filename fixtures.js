@@ -21,13 +21,13 @@ db.once("open", async () => {
         username: "user",
         password: "123",
         displayName: "User",
-        phone: 772234345456,
+        phone: 7722343454,
         token: nanoid()
     }, {
         username: "user1",
         password: "123",
         displayName: "User1",
-        phone: 772234345456,
+        phone: 7722343454,
         token: nanoid()
     });
 
