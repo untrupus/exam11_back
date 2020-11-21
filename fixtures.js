@@ -32,49 +32,48 @@ db.once("open", async () => {
     });
 
     await Product.create({
-            title: "Product 1",
+            title: "Mercedes w220",
             category: "cars",
             user: user._id,
             price: 225,
             description: "product description",
             image: "car.jpg"
         }, {
-            title: "Product 1",
+            title: "Desert Eagle",
             category: "guns",
             user: user._id,
             price: 567,
             description: "product description",
             image: "gun.jpg"
         },{
-            title: "Product 1",
+            title: "Jeans",
             category: "clothes",
             user: user1._id,
             price: 123,
             description: "product description",
             image: "cloth.jpg"
         },{
-            title: "Product 1",
+            title: "Toyota Camry",
             category: "cars",
             user: user1._id,
             price: 225,
             description: "product description",
             image: "car.jpg"
         },{
-            title: "Product 1",
+            title: "Makarov",
             category: "guns",
             user: user._id,
             price: 8900,
             description: "product description",
             image: "gun.jpg"
         },{
-            title: "Product 1",
+            title: "Moskvitch 412",
             category: "cars",
             user: user._id,
             price: 345,
             description: "product description",
-            image: "car.jpg"
         },{
-            title: "Product 1",
+            title: "MacBook Pro",
             category: "computers",
             user: user1._id,
             price: 225,

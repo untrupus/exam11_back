@@ -43,11 +43,10 @@ router.post('/', auth, config.upload.single("image"), async (req, res) => {
 });
 
 router.delete('/:id', auth, async (req, res) => {
-    const firstResult = await Product.findById(req.params.id).populate({path: "user"});
-    if (firstResult.user.equal(req.user._id)) {
-
-        const result = await Product.findByIdAndDelete({_id: req.params.id});
-        if (result) {
+    const result = await Product.findById({_id: req.params.id}).populate({path: "user"});
+    if (req.user._id.toString() === result.user._id.toString()) {
+        const newResult = await Product.findByIdAndDelete({_id: req.params.id});
+        if (newResult) {
             res.send("Task removed");
         } else {
             res.sendStatus(403);
